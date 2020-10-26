@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: golang-api
+  name: golang-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: golang-api
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: golang-api
+    spec:
+      containers:
+      - image: debianmaster/apiworld-golang-api
+        name: golang-api
+        resources: {}
+status: {}
