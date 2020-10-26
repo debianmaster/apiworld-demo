@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: react-ui
+  name: react-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: react-ui
+  strategy: {}
+  template:
+    metadata:
+  
+      labels:
+        app: react-ui
+    spec:
+      containers:
+      - image: debianmaster/apiworld-react-ui
+        name: react-ui
+        resources: {}
+status: {}

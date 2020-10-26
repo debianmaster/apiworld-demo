@@ -1,0 +1,19 @@
+apiVersion: skaffold/v2beta8
+kind: Config
+metadata:
+  name: apiworlddemo
+build:
+  artifacts:
+  - image: debianmaster/apiworld-react-ui
+    context: react-ui 
+  - image: debianmaster/apiworld-golang-api
+    context: golang  
+  - image: debianmaster/apiworld-nodejs-api
+    context: nodejs
+deploy:
+  kubectl:
+    manifests:
+    - react-ui/deploy/*
+    - nodejs/deploy/*
+    - golang/deploy/*
+    - common/deploy/*

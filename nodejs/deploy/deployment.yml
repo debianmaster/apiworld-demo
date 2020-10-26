@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nodejs-api
+  name: nodejs-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodejs-api
+  strategy: {}
+  template:
+    metadata:
+  
+      labels:
+        app: nodejs-api
+    spec:
+      containers:
+      - image: debianmaster/apiworld-nodejs-api
+        name: nodejs-api
+        resources: {}
+status: {}
