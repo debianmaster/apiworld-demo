@@ -20,15 +20,15 @@ func main() {
 
 	props := new(Props)
 	props.Name = "golang"
-	props.FavColor = "purple"
+	props.FavColor = "pink"
 	hostname, err := os.Hostname()
 
 	if err != nil {
 		panic(err)
 	}
 	props.Hostname = hostname
-	e.GET("/props", func(c echo.Context) error {
+	e.GET("/golang/props", func(c echo.Context) error {
 		return c.JSON(http.StatusOK, props)
 	})
-	e.Logger.Fatal(e.Start(":1323"))
+	e.Logger.Fatal(e.Start(":3000"))
 }

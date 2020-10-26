@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ui-ingress
+spec:
+  rules:
+  - host: 127.0.0.1.nip.io
+    http:
+      paths:
+      - backend:
+          serviceName: react-ui
+          servicePort: 3000
+        path: /
+      - backend:
+          serviceName: golang-api
+          servicePort: 3000
+        path: /golang
+      - backend:
+          serviceName: nodejs-api
+          servicePort: 3000
+        path: /nodejs

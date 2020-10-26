@@ -3,12 +3,11 @@ const os=require('os')
 const app = express()
 const port = 3000
 var cors = require('cors')
-
 app.use(cors())
 
-app.get('/props', (req, res) => {
+app.get('/nodejs/props', (req, res) => {
   res.json({
-      favColor:"red",
+      favColor:"lightblue",
       name:"nodejs",
       hostname: os.hostname()
   })

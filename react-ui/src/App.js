@@ -14,8 +14,6 @@ import { useSpring, a } from "react-spring/three";
 // soft Shadows
 softShadows();
 
-
-
 const SpinningMesh = ({ position, color, speed, args }) => {
   //ref to target the mesh
   const mesh = useRef();
@@ -66,7 +64,7 @@ const App = () => {
   useEffect(() => {
     const interval = setInterval(() => {
 
-      fetch("https://nodejs.9chakri.repl.co/props")
+      fetch("/nodejs/props")
       .then(res => res.json())
       .then(
         (result) => {
@@ -78,7 +76,7 @@ const App = () => {
         }
       )
       
-      fetch("https://golang.9chakri.repl.co/props")
+      fetch("/golang/props")
       .then(res => res.json())
       .then(
         (result) => {
