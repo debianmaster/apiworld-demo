@@ -20,7 +20,7 @@ func main() {
 
 	props := new(Props)
 	props.Name = "golang"
-	props.FavColor = "pink"
+	props.FavColor = "black"
 	hostname, err := os.Hostname()
 
 	if err != nil {

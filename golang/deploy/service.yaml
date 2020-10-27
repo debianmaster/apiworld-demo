@@ -6,7 +6,7 @@ metadata:
   name: golang-api
 spec:
   ports:
-  - name: 3000-80
+  - name: http
     port: 3000
     protocol: TCP
     targetPort: 3000

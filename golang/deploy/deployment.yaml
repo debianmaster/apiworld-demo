@@ -16,7 +16,7 @@ spec:
         app: golang-api
     spec:
       containers:
-      - image: debianmaster/apiworld-golang-api
+      - image: quay.io/coolcompany/apiworld-golang-api
         name: golang-api
         resources: {}
 status: {}

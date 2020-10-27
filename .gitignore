@@ -1,4 +1,5 @@
 nodejs/node_modules/
 golang/vendor/
 golang/server
+golang/bin/
 react-ui/node_modules/

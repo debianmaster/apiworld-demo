@@ -1,0 +1,11 @@
+name: nodejs-api
+labels:
+  app: nodejs-api
+image: okteto/node:12
+container: nodejs-api
+command:
+- bash
+sync:
+- .:/usr/src/app
+forward:
+- 3000:3000

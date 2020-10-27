@@ -7,9 +7,12 @@ build:
   - image: debianmaster/apiworld-react-ui
     context: react-ui 
   - image: debianmaster/apiworld-golang-api
-    context: golang  
+    context: golang
+    sync:
+      infer:
+      - '*.go'
   - image: debianmaster/apiworld-nodejs-api
-    context: nodejs
+    context: nodejs    
 deploy:
   kubectl:
     manifests:
