@@ -1,10 +1,11 @@
 FROM golang:1.12 as build-env
+ENV GO111MODULE=on
 
 WORKDIR /go/src/app
-ADD . /go/src/app
-
-RUN go get -d -v ./...
-
+COPY go.mod .
+COPY go.sum .
+RUN go mod download
+ADD . .
 RUN go build -o /go/bin/app
 
 FROM ubuntu:bionic
