@@ -10,17 +10,10 @@ build:
     context: golang    
     docker:
         dockerfile: Dockerfile.dev
-    sync:
-      infer:
-      - 'bin/golang-api'
   - image: quay.io/chak/nodejs-api
     context: nodejs
     docker:
         dockerfile: Dockerfile.dev
-    sync:
-      manual:
-      - src: '*.js'
-        dest: '/app'  
 deploy:
   kubectl:
     manifests:
