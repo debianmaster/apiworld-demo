@@ -1,7 +1,0 @@
-FROM node:10.22.1-alpine3.11 AS build-env
-WORKDIR /app
-RUN npm i nodemon -g
-ADD package.json package.json
-RUN npm i
-ADD . /app
-CMD ["nodemon","server.js"]
