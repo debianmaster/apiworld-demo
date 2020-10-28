@@ -4,7 +4,7 @@ metadata:
   name: ui-ingress
 spec:
   rules:
-  - host: 127.0.0.1.nip.io
+  - host: 10.0.0.180.nip.io
     http:
       paths:
       - backend:

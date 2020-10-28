@@ -4,3 +4,7 @@ golang/server
 golang/bin/
 react-ui/node_modules/
 tilt_modules/
+telepresence.log
+nodejs/devfile.yaml
+golang/dev-entrypoint.sh
+nodejs/.odo
