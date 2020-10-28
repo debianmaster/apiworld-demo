@@ -7,6 +7,6 @@ RUN go get -d -v ./...
 
 RUN go build -o /go/bin/app
 
-FROM golang:1.12
+FROM ubuntu:bionic
 COPY --from=build-env /go/bin/app /
 CMD ["/app"]
