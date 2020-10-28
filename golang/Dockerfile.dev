@@ -1,5 +1,3 @@
-FROM node:12.19.0-alpine3.9
-RUN npm i nodemon -g
+FROM ubuntu:bionic
 COPY bin/golang-api /app
-CMD ["nodemon","--exec","/app","--signal","SIGTERM"]
-
+CMD ["/app"]
