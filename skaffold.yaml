@@ -19,8 +19,8 @@ build:
         dockerfile: Dockerfile.dev
     sync:
       manual:
-      - src: './**/*.js'
-        dest: '/app/'  
+      - src: '*.js'
+        dest: '/app'  
 deploy:
   kubectl:
     manifests:

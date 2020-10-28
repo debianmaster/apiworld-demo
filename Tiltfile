@@ -1,5 +1,5 @@
 # -*- mode: Python -*-
-allow_k8s_contexts('k3d-dev')
+allow_k8s_contexts('default')
 load('ext://restart_process', 'docker_build_with_restart')
 
 k8s_yaml('golang/deploy/deployment.yaml')
