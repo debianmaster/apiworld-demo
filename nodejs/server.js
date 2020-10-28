@@ -7,7 +7,7 @@ app.use(cors())
 
 app.get('/nodejs/props', (req, res) => {
   res.json({
-      favColor:"lightblue",
+      favColor:"blue",
       name:"nodejs",
       hostname: os.hostname()
   })

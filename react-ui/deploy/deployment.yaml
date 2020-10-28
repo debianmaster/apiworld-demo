@@ -17,7 +17,7 @@ spec:
         app: react-ui
     spec:
       containers:
-      - image: debianmaster/apiworld-reactui
+      - image: quay.io/chak/react-ui
         name: react-ui
         resources: {}
 status: {}

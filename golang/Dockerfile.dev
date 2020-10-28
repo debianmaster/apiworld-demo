@@ -1,3 +1,5 @@
-FROM alpine:3.12
+FROM node:12.19.0-alpine3.9
+RUN npm i nodemon -g
 COPY bin/golang-api /app
-CMD ["/app"]
+CMD ["nodemon","--exec","/app","--signal","SIGTERM"]
+
